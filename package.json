@@ -5,10 +5,12 @@
   "main": "lib",
   "scripts": {
     "test": "node ./ci/test.js",
-    "prepare": "node ./ci/build.js && node ./ci/shim.js"
+    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/assets.js"
   },
   "repository": "realglobe-Inc/pon-runner",
-  "keywords": [],
+  "keywords": [
+    "Pon"
+  ],
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
