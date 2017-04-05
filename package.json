@@ -38,6 +38,7 @@
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
     "markdown-toc": "^1.1.0",
+    "pon-assets": "^1.1.1",
     "sg-templates": "^1.4.4",
     "sugos-travis": "^2.0.7"
   },
