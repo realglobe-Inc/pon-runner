@@ -66,7 +66,8 @@ describe('pon-runner', function () {
       foo: {
         bar: () => 'This is baz!'
       },
-      baz: [ 'foo/bar' ],
+      baz: [ 'foo/bar' ]
+    }).set({
       quz: [ 'baz' ]
     }).bind()
     let results = yield run('quz')
