@@ -6,7 +6,7 @@
 
 const PonRunner = require('../lib/pon_runner.js')
 const asleep = require('asleep')
-const { deepEqual } = require('assert')
+const { deepEqual, ok } = require('assert')
 const co = require('co')
 
 describe('pon-runner', function () {
@@ -55,10 +55,18 @@ describe('pon-runner', function () {
     let run = new PonRunner({
       foo: {
         bar: () => 'This is baz!'
+      },
+      quz: {
+        default: [
+          () => 'd1',
+          () => 'd2'
+        ]
       }
     }).bind()
     let results = yield run('foo/bar')
     deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
+
+    deepEqual(yield run('quz'), { quz: [ 'd1', 'd2' ] })
   }))
 
   it('Alias', () => co(function * () {
@@ -67,11 +75,14 @@ describe('pon-runner', function () {
         bar: () => 'This is baz!'
       },
       baz: [ 'foo/bar' ]
-    }).set({
-      quz: [ 'baz' ]
+    }).alias({
+      f: 'baz',
+      f2: [ 'baz' ]
     }).bind()
-    let results = yield run('quz')
+    let results = yield run('f')
     deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
+
+    ok(run.tasks.f.isAlias)
   }))
 })
 
