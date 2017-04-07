@@ -55,10 +55,18 @@ describe('pon-runner', function () {
     let run = new PonRunner({
       foo: {
         bar: () => 'This is baz!'
+      },
+      quz: {
+        default: [
+          () => 'd1',
+          () => 'd2'
+        ]
       }
     }).bind()
     let results = yield run('foo/bar')
     deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
+
+    deepEqual(yield run('quz'), { quz: [ 'd1', 'd2' ] })
   }))
 
   it('Alias', () => co(function * () {
@@ -67,10 +75,11 @@ describe('pon-runner', function () {
         bar: () => 'This is baz!'
       },
       baz: [ 'foo/bar' ]
-    }).set({
-      quz: [ 'baz' ]
+    }).alias({
+      f: 'baz',
+      f2: [ 'baz' ]
     }).bind()
-    let results = yield run('quz')
+    let results = yield run('f')
     deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
   }))
 })
