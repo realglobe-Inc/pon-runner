@@ -1,6 +1,6 @@
 {
   "name": "pon-runner",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "Runner for pon",
   "main": "lib",
   "scripts": {
@@ -47,8 +47,5 @@
   "engines": {
     "node": ">=6",
     "npm": ">=4"
-  },
-  "publishConfig": {
-    "registry": "https://realglobe.artifactoryonline.com/realglobe/api/npm/npm-local"
   }
 }
