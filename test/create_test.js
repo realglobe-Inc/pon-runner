@@ -6,23 +6,23 @@
 
 const create = require('../lib/create.js')
 const { ok } = require('assert')
-const co = require('co')
+
 
 describe('create', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Create', () => co(function * () {
+  it('Create', async () => {
     let created = create({})
     ok(created)
-  }))
+  })
 })
 
 /* global describe, before, after, it */

@@ -1,6 +1,6 @@
 {
   "name": "pon-runner",
-  "version": "2.0.2",
+  "version": "3.0.0",
   "description": "Runner for pon",
   "main": "lib",
   "scripts": {
@@ -23,7 +23,6 @@
   "homepage": "https://github.com/realglobe-Inc/pon-runner#readme",
   "dependencies": {
     "abind": "^1.0.3",
-    "co": "^4.6.0",
     "minimatch": "^3.0.3",
     "pon-context": "^2.0.2"
   },
@@ -34,7 +33,7 @@
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^5.0.20",
+    "ape-tmpl": "^6.0.0",
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
@@ -45,7 +44,7 @@
     "sugos-travis": "^2.0.7"
   },
   "engines": {
-    "node": ">=6",
+    "node": ">=7.6",
     "npm": ">=4"
   }
 }

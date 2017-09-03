@@ -7,26 +7,26 @@
 const isRunner = require('../lib/is_runner.js')
 const PonRunner = require('../lib/pon_runner')
 const { ok } = require('assert')
-const co = require('co')
+
 
 describe('is-runner', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Is runner', () => co(function * () {
+  it('Is runner', async () => {
     ok(isRunner(new PonRunner({})))
     ok(!isRunner(null))
     ok(!isRunner(''))
     ok(!isRunner(false))
     ok(!isRunner({ foo: 'bar' }))
-  }))
+  })
 })
 
 /* global describe, before, after, it */

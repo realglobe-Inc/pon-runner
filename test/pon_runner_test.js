@@ -6,52 +6,51 @@
 
 const PonRunner = require('../lib/pon_runner.js')
 const asleep = require('asleep')
-const { deepEqual, ok } = require('assert')
-const co = require('co')
+const {deepEqual, ok} = require('assert')
 
 describe('pon-runner', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Pon', () => co(function * () {
-    let run = new PonRunner({
-      foo: () => co(function * () {
-        yield asleep(100)
+  it('Pon', async () => {
+    const run = new PonRunner({
+      foo: async () => {
+        await asleep(100)
         return 'foo finished!'
-      })
+      }
     }).bind()
-    let results = yield run('foo')
-    deepEqual(results, { foo: [ 'foo finished!' ] })
-  }))
+    let results = await run('foo')
+    deepEqual(results, {foo: ['foo finished!']})
+  })
 
-  it('pattern', () => co(function * () {
-    let run = new PonRunner({
-      foo: (ctx) => co(function * () {
-        yield asleep(100)
+  it('pattern', async () => {
+    const run = new PonRunner({
+      foo: async (ctx) => {
+        await asleep(100)
         ctx.logger.debug('Log of foo')
         return 'foo finished!'
-      }),
-      bar: (ctx) => co(function * () {
-        yield asleep(100)
+      },
+      bar: async (ctx) => {
+        await asleep(100)
         ctx.logger.debug('Log of bar')
         return 'bar finished!'
-      })
+      }
     }).bind()
-    let results = yield run('*')
+    const results = await run('*')
     deepEqual(results, {
-      foo: [ 'foo finished!' ],
-      bar: [ 'bar finished!' ]
+      foo: ['foo finished!'],
+      bar: ['bar finished!']
     })
-  }))
+  })
 
-  it('Nested', () => co(function * () {
+  it('Nested', async () => {
     let run = new PonRunner({
       foo: {
         bar: () => 'This is baz!'
@@ -63,27 +62,27 @@ describe('pon-runner', function () {
         ]
       }
     }).bind()
-    let results = yield run('foo/bar')
-    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
+    let results = await run('foo/bar')
+    deepEqual(results, {'foo/bar': ['This is baz!']})
 
-    deepEqual(yield run('quz'), { quz: [ 'd1', 'd2' ] })
-  }))
+    deepEqual(await run('quz'), {quz: ['d1', 'd2']})
+  })
 
-  it('Alias', () => co(function * () {
+  it('Alias', async () => {
     let run = new PonRunner({
       foo: {
         bar: () => 'This is baz!'
       },
-      baz: [ 'foo/bar' ]
+      baz: ['foo/bar']
     }).alias({
       f: 'baz',
-      f2: [ 'baz' ]
+      f2: ['baz']
     }).bind()
-    let results = yield run('f')
-    deepEqual(results, { 'foo/bar': [ 'This is baz!' ] })
+    let results = await run('f')
+    deepEqual(results, {'foo/bar': ['This is baz!']})
 
     ok(run.tasks.f.isAlias)
-  }))
+  })
 })
 
 /* global describe, before, after, it */

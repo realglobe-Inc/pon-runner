@@ -6,17 +6,16 @@
 
 process.chdir(`${__dirname}/..`)
 
-const co = require('co')
 const apeTasking = require('ape-tasking')
 const filecopy = require('filecopy')
 const path = require('path')
-const { images } = require('pon-assets/lib/paths')
+const {images} = require('pon-assets/lib/paths')
 
 apeTasking.runTasks('assets', [
-  () => co(function * () {
+  async () => {
     for (let name of Object.keys(images)) {
-      let filename = images[ name ]
-      let result = yield filecopy(filename, `assets/images/${path.basename(filename)}`, {
+      let filename = images[name]
+      let result = await filecopy(filename, `assets/images/${path.basename(filename)}`, {
         mkdirp: true,
         force: true,
         mode: '644'
@@ -25,5 +24,5 @@ apeTasking.runTasks('assets', [
         console.log(`File generated: ${filename}`)
       )
     }
-  })
+  }
 ])
