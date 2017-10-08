@@ -1,6 +1,6 @@
 {
   "name": "pon-runner",
-  "version": "3.1.0",
+  "version": "3.1.1",
   "description": "Runner for pon",
   "main": "lib",
   "scripts": {
@@ -29,16 +29,16 @@
   "devDependencies": {
     "ababel": "^2.0.1",
     "ababel-es2015": "^2.0.1",
-    "amocha": "*",
+    "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "*",
+    "ape-tmpl": "^6.0.2",
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
     "injectmock": "^2.0.0",
-    "markdown-toc": "*",
+    "markdown-toc": "^1.2.0",
     "pon-assets": "^1.1.5",
     "sg-templates": "^1.4.4",
     "sugos-travis": "^2.0.7"
