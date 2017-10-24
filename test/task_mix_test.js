@@ -33,7 +33,20 @@ describe('task-mix', function () {
     })
     deepEqual(
       Object.keys(mixed.tasks),
-      ['a', 'b', 'c', 'c[0]', 'c[1]', 'c[2]', 'c[3]', 'c[3]/hoge', 'c[4]', 'c[4][0]', 'd', 'd/e']
+      [
+        'a',
+        'b',
+        'c',
+        'c/0',
+        'c/1',
+        'c/2',
+        'c/3',
+        'c/3/hoge',
+        'c/4',
+        'c/4/0',
+        'd',
+        'd/e'
+      ]
     )
   })
 })
