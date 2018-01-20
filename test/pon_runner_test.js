@@ -20,12 +20,17 @@ describe('pon-runner', function () {
   })
 
   it('Pon', async () => {
-    const run = new PonRunner({
+    const runner = new PonRunner({
+      $doc: {},
       foo: async () => {
         await asleep(100)
         return 'foo finished!'
       }
-    }).bind()
+    })
+    deepEqual(Object.keys(runner.tasks), [
+      'foo'
+    ])
+    const run = runner.bind()
     let results = await run('foo')
     deepEqual(results, {foo: ['foo finished!']})
   })
