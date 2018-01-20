@@ -1,6 +1,6 @@
 {
   "name": "pon-runner",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "description": "Runner for pon",
   "main": "lib",
   "scripts": {
