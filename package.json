@@ -1,7 +1,7 @@
 {
   "name": "pon-runner",
   "description": "Runner for pon",
-  "version": "3.3.4",
+  "version": "3.4.0",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
@@ -16,7 +16,7 @@
     "pon-context": "^2.0.2"
   },
   "devDependencies": {
-    "ababel": "^4.0.1",
+    "ababel": "^4.0.6",
     "amocha": "^4.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
