@@ -1,26 +1,15 @@
 {
   "name": "pon-runner",
-  "version": "3.3.4",
   "description": "Runner for pon",
-  "main": "lib",
-  "scripts": {
-    "test": "node ./ci/test.js",
-    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/assets.js"
-  },
-  "repository": "realglobe-Inc/pon-runner",
-  "keywords": [
-    "Pon"
-  ],
+  "version": "3.3.4",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
     "url": "http://okunishitaka.com"
   },
-  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/realglobe-Inc/pon-runner/issues"
   },
-  "homepage": "https://github.com/realglobe-Inc/pon-runner#readme",
   "dependencies": {
     "abind": "^1.0.3",
     "minimatch": "^3.0.3",
@@ -36,6 +25,7 @@
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
+    "fixpack": "^2.3.1",
     "injectmock": "^2.0.0",
     "markdown-toc": "^1.2.0",
     "pon-assets": "^1.1.5",
@@ -45,5 +35,16 @@
   "engines": {
     "node": ">=8",
     "npm": ">=5"
+  },
+  "homepage": "https://github.com/realglobe-Inc/pon-runner#readme",
+  "keywords": [
+    "Pon"
+  ],
+  "license": "Apache-2.0",
+  "main": "lib",
+  "repository": "realglobe-Inc/pon-runner",
+  "scripts": {
+    "prepare": "node ./ci/build.js && node ./ci/shim.js && node ./ci/assets.js && fixpack",
+    "test": "node ./ci/test.js"
   }
 }
