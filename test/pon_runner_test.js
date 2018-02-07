@@ -22,6 +22,7 @@ describe('pon-runner', function () {
   it('Pon', async () => {
     const runner = new PonRunner({
       $doc: {},
+      $cwd: __dirname,
       foo: async () => {
         await asleep(100)
         return 'foo finished!'
@@ -33,6 +34,8 @@ describe('pon-runner', function () {
     const run = runner.bind()
     let results = await run('foo')
     deepEqual(results, {foo: ['foo finished!']})
+
+    ok(runner.cwd)
   })
 
   it('pattern', async () => {
