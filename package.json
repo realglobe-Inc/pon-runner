@@ -18,11 +18,11 @@
   },
   "devDependencies": {
     "ababel": "^4.0.6",
-    "amocha": "^4.0.0",
+    "amocha": "^5.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",
     "ape-tasking": "^4.0.9",
-    "ape-tmpl": "^6.0.8",
+    "ape-tmpl": "^6.0.10",
     "ape-updating": "^4.1.1",
     "asleep": "^1.0.3",
     "coz": "^6.0.20",
