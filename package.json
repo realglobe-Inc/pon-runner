@@ -17,7 +17,7 @@
     "pon-context": "^2.0.2"
   },
   "devDependencies": {
-    "ababel": "^4.0.6",
+    "ababel": "^4.0.7",
     "amocha": "^5.0.0",
     "ape-formatting": "^1.0.2",
     "ape-releasing": "^4.0.4",

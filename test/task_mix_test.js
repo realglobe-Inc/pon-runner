@@ -48,6 +48,9 @@ describe('task-mix', function () {
         'd/e'
       ]
     )
+
+    mixed.delTask('a')
+    mixed.registerTask('a', () => null)
   })
 })
 
