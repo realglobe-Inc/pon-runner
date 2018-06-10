@@ -8,7 +8,7 @@ before_install:
 install:
 - npm install
 script:
-- npm run pr
+- "./ci/build.js"
 - "./ci/shim.js"
 - "./ci/doc.js"
 - "./ci/test.js"
