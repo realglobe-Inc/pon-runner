@@ -1,7 +1,7 @@
 {
   "name": "pon-runner",
   "description": "Runner for pon",
-  "version": "3.4.11",
+  "version": "3.4.13",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
@@ -30,8 +30,7 @@
     "injectmock": "^2.0.0",
     "markdown-toc": "^1.2.0",
     "pon-assets": "^1.1.5",
-    "sg-templates": "^1.4.4",
-    "sugos-travis": "^2.0.7"
+    "sg-templates": "^1.4.4"
   },
   "engines": {
     "node": ">=8",
