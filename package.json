@@ -25,12 +25,14 @@
     "ape-tmpl": "^6.0.10",
     "ape-updating": "^5.0.1",
     "asleep": "^1.0.3",
+    "co": "^4.6.0",
     "coz": "^7.0.2",
     "fixpack": "^2.3.1",
     "injectmock": "^2.0.0",
     "markdown-toc": "^1.2.0",
     "pon-assets": "^1.1.5",
-    "sg-templates": "^1.4.4"
+    "sg-templates": "^1.4.4",
+    "writeout": "^2.2.1"
   },
   "engines": {
     "node": ">=8",
