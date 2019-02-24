@@ -55,7 +55,7 @@ Runner for pon
 
 <!-- Section from "doc/guides/00.TOC.md.hbs" Start -->
 
-<a name="section-doc-guides-00-t-o-c-md"></a>
+<a name="section-doc-guides-00-toc-md"></a>
 
 Table of Contents
 ----------------
