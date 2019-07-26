@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "abind": "^1.0.5",
-    "argx": "^4.0.0",
+    "argx": "^4.0.2",
     "minimatch": "^3.0.3",
     "pon-context": "^3.0.2"
   },
   "devDependencies": {
-    "ababel": "^5.0.12",
-    "amocha": "^5.0.2",
+    "ababel": "^6.0.3",
+    "amocha": "^6.0.0",
     "ape-formatting": "^2.0.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",
