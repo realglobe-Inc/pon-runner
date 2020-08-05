@@ -1,7 +1,7 @@
 {
   "name": "pon-runner",
   "description": "Runner for pon",
-  "version": "3.4.17",
+  "version": "3.4.18",
   "author": {
     "name": "Taka Okunishi",
     "email": "okunishinishi@gmail.com",
@@ -12,13 +12,13 @@
   },
   "dependencies": {
     "abind": "^1.0.5",
-    "argx": "^4.0.2",
+    "argx": "^4.0.4",
     "minimatch": "^3.0.3",
     "pon-context": "^3.0.2"
   },
   "devDependencies": {
-    "ababel": "^6.0.3",
-    "amocha": "^6.0.0",
+    "ababel": "^6.1.4",
+    "amocha": "^7.1.1",
     "ape-formatting": "^2.0.2",
     "ape-releasing": "^5.0.7",
     "ape-tasking": "^4.0.12",
@@ -26,13 +26,13 @@
     "ape-updating": "^5.0.3",
     "asleep": "^1.0.3",
     "co": "^4.6.0",
-    "coz": "^7.0.19",
-    "fixpack": "^2.3.1",
+    "coz": "^7.2.0",
+    "fixpack": "^3.0.6",
     "injectmock": "^2.0.0",
     "markdown-toc": "^1.2.0",
     "pon-assets": "^1.1.5",
     "sg-templates": "^1.4.4",
-    "writeout": "^2.2.4"
+    "writeout": "^2.3.2"
   },
   "engines": {
     "node": ">=8",
